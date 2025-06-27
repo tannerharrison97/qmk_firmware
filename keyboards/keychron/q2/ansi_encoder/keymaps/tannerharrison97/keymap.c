@@ -48,21 +48,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LWIN, KC_LALT,                            KC_SPC,                             KC_RALT, MO(_FN2), MO(_FN3),  KC_LEFT, KC_DOWN, KC_RGHT),
 
     [_FN1] = LAYOUT_ansi_67(
-        KC_ESC,  KC_BRID, KC_BRIU, _______, _______, RM_VALD, RM_VALU, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD,  KC_VOLU,   _______,          RM_TOGG,
+        KC_ESC,  KC_BRID, KC_BRIU, _______, _______, RM_VALD, RM_VALU, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD,  KC_VOLU,   _______,          KC_MPLY,
         RM_TOGG, RM_NEXT, RM_VALU, RM_HUEU, RM_SATU, RM_SPDU, _______, _______, _______, _______, _______, _______,  _______,   _______,          _______,
         _______, RM_PREV, RM_VALD, RM_HUED, RM_SATD, RM_SPDD, _______, _______, _______, _______, _______, _______,             _______,          _______,
         _______,          _______, _______, _______, _______, _______, NK_TOGG, _______, _______, _______, _______,             _______, _______,
         _______, _______, _______,                            _______,                            _______, _______,  _______,   _______, _______, _______),
 
     [_FN2] = LAYOUT_ansi_67(
-        KC_ESC,  KC_BRID, KC_BRIU, KC_TASK, KC_FLXP, RM_VALD, RM_VALU, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD,  KC_VOLU,   _______,          RM_TOGG,
+        KC_ESC,  KC_BRID, KC_BRIU, KC_TASK, KC_FLXP, RM_VALD, RM_VALU, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD,  KC_VOLU,   _______,          KC_MPLY,
         RM_TOGG, RM_NEXT, RM_VALU, RM_HUEU, RM_SATU, RM_SPDU, _______, _______, _______, _______, _______, _______,  _______,   _______,          _______,
         _______, RM_PREV, RM_VALD, RM_HUED, RM_SATD, RM_SPDD, _______, _______, _______, _______, _______, _______,             _______,          _______,
         _______,          _______, _______, _______, _______, _______, NK_TOGG, _______, _______, _______, _______,             _______, _______,
         _______, _______, _______,                            _______,                            _______, _______,  _______,   _______, _______, _______),
 
     [_FN3] = LAYOUT_ansi_67(
-        KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,   KC_F12,    _______,          _______,
+        KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,   KC_F12,    _______,          RM_TOGG,
         RM_TOGG, RM_NEXT, RM_VALU, RM_HUEU, RM_SATU, RM_SPDU, _______, _______, _______, _______, _______, _______,  _______,   _______,          _______,
         _______, RM_PREV, RM_VALD, RM_HUED, RM_SATD, RM_SPDD, _______, _______, _______, _______, _______, _______,             _______,          _______,
         _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,             _______, _______,
@@ -78,8 +78,8 @@ tap_dance_action_t tap_dance_actions[] = {
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [MAC_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [WIN_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-    [_FN1]     = { ENCODER_CCW_CW(RM_VALD, RM_VALU) },
-    [_FN2]     = { ENCODER_CCW_CW(RM_VALD, RM_VALU) },
-    [_FN3]     = { ENCODER_CCW_CW(_______, _______) },
+    [_FN1]     = { ENCODER_CCW_CW(KC_BRID, KC_BRIU) },
+    [_FN2]     = { ENCODER_CCW_CW(KC_BRID, KC_BRIU) },
+    [_FN3]     = { ENCODER_CCW_CW(RM_VALD, RM_VALU) },
 };
 #endif
